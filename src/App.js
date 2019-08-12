@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+const THINGS = [
+	{
+		id: 1,
+		author: 'Mitch',
+		message: 'hello there!',
+		img:'any img here'
+	},
+	{
+		id: 2,
+		author: 'Sara',
+		message: 'hello there!',
+		img:'any img here'
+	},
+	{
+		id: 3,
+		author: 'Ann',
+		message: 'hello there!',
+		img:'any img here'
+	},
+	{
+		id: 4,
+		author: 'Peter',
+		message: 'hello there!',
+		img:'any img here'
+	},
+	{
+		id: 5,
+		author: 'Else',
+		message: 'hello there!',
+		img:'any img here'
+	}
+]
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<ul>
+				{THINGS.map( e => {return <li key={e.id.toString()}>{e.author}</li>})}
+			</ul>
+		</div>
+	);
 }
 
 export default App;
